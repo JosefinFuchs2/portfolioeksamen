@@ -2,8 +2,6 @@
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <title>Forside</title>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,13 +11,23 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
       rel="stylesheet"
     />
+
     <!-- Poly -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poly&display=swap"
       rel="stylesheet"
     />
 
+    <!-- MonteCarlo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Forside</title>
+
     <link rel="stylesheet" href="generel.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -56,14 +64,53 @@
       </nav>
     </header>
 
-    <main>
-      <!-- tom for nu -->
+    <main class="index">
+      <!-- HERO -->
+      <section class="hero">
+        <h1 class="hero-top">VELKOMMEN TIL MIN</h1>
+
+        <div class="hero-script-row">
+          <span class="hero-script">Portfolio</span>
+          <span class="hero-year">2025</span>
+        </div>
+
+        <div class="hero-info">
+          <p class="hero-info-left">EFTERÅR 2025<br />PORTFOLIO - EKSAMEN</p>
+          <p class="hero-info-mid">( JOSEFIN FILIPPA FUCHS )</p>
+          <p class="hero-info-right">1. SEMESTER</p>
+        </div>
+      </section>
+
+      <!-- STORT BILLEDE -->
+      <!-- VIGTIGT: Skift src til dit rigtige billede-navn -->
+      <img
+        class="hero-img"
+        src="forside.webp"
+        alt="Stemningsbillede til forside"
+      />
+
+      <!-- VELKOMMEN BOKS -->
+      <section class="welcome">
+        <h2 class="welcome-title">VELKOMMEN</h2>
+        <p class="welcome-sub">TIL MIT PORTFOLIO</p>
+
+        <p class="welcome-text">
+          Her er mit portfolio fra første semester på multimediedesign. Her
+          præsenterer og forklarer jeg kort hvert forløb, jeg har arbejdet med i
+          løbet af semesteret, samt de tanker og processer, der ligger bag. Du
+          finder også links til mine endelige opgaver, hvor jeg har samlet
+          resultaterne af mit arbejde. God fornøjelse!
+        </p>
+
+        <a class="welcome-btn" href="ommig.html">OMMIG</a>
+      </section>
     </main>
 
-    <script src="generel.js"></script>
     <footer class="site-footer">
       <img src="footer.webp" alt="Illustreret footer" class="footer-image" />
       <p>Portfolio af Josefin Filippa Fuchs</p>
     </footer>
+
+    <script src="generel.js"></script>
   </body>
 </html>

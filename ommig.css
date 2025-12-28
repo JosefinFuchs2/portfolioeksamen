@@ -1,0 +1,273 @@
+/* ================= OMMIG ================= */
+.ommig {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 16px 80px;
+}
+
+/* typografi */
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #898a84;
+  margin-bottom: 10px;
+}
+
+.page-title {
+  font-family: "Poly", serif;
+  font-weight: 400;
+  font-size: 52px;
+  color: var(--logo);
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-family: "Poly", serif;
+  font-weight: 400;
+  font-size: 44px;
+  color: var(--logo);
+  margin-bottom: 18px;
+}
+
+.ommig p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #898a84;
+  line-height: 1.7;
+}
+
+/* ================= ROWS (Desktop: 2 kolonner) ================= */
+.about-row,
+.work-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: start;
+  margin-bottom: 70px;
+}
+
+.about-img img,
+.work-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* giv lidt “luft” som i prototype */
+.about-text,
+.work-text {
+  padding-top: 30px;
+}
+
+/* ================= UDDANNELSE ================= */
+.edu {
+  padding: 10px 0 70px;
+}
+
+.edu-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.edu-list p,
+.work-list p {
+  margin: 0 0 14px;
+}
+
+.edu-list strong,
+.work-list strong {
+  font-weight: 600;
+  color: #898a84;
+}
+
+/* 3 billeder (ens størrelse, “smalle lodrette” som prototype) */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.edu-card {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-card img {
+  width: 100%;
+  height: 360px; /* desktop “tall” look */
+  object-fit: cover;
+  display: block;
+}
+
+.edu-card figcaption {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #f8f8f6;
+  text-transform: uppercase;
+  background: rgba(60, 47, 38, 0.55);
+  padding: 4px 6px;
+}
+
+/* ================= DESKTOP (som din prototype) ================= */
+@media (min-width: 900px) {
+  .ommig {
+    padding: 50px 16px 90px;
+  }
+
+  .about-row {
+    grid-template-columns: 1.05fr 1fr; /* billede lidt større */
+    gap: 70px;
+    margin-bottom: 60px;
+  }
+
+  .work-row {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 70px;
+    margin-bottom: 40px;
+  }
+
+  .about-text,
+  .work-text {
+    padding-top: 70px; /* matcher “høj” tekst i prototype */
+  }
+
+  .page-title {
+    font-size: 56px;
+  }
+
+  .section-title {
+    font-size: 46px;
+  }
+
+  /* UDDANNELSE: tekst venstre, billeder højre */
+  .edu-inner {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+  }
+
+  .edu {
+    padding: 10px 0 80px;
+  }
+
+  .edu-card img {
+    height: 340px; /* 3 ens lodrette kort */
+  }
+}
+@media (min-width: 900px) {
+  .row-img {
+    height: 520px; /* gør portræt + erhverv mindre høje */
+    object-fit: cover; /* beskærer pænt */
+  }
+}
+
+/* ================= MOBIL (som din prototype: alt stack + billeder OVER uddannelse-tekst) ================= */
+@media (max-width: 899px) {
+  .ommig {
+    padding: 26px 16px 70px;
+  }
+
+  .page-title {
+    font-size: 44px;
+  }
+
+  .section-title {
+    font-size: 42px;
+  }
+
+  .about-text,
+  .work-text {
+    padding-top: 0;
+  }
+
+  /* MOBIL: uddannelse skal være:
+     billeder -> titel + liste
+     derfor bytter vi rækkefølgen visuelt */
+  .edu-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 18px;
+  }
+
+  .edu-card img {
+    height: 210px; /* samme højde på alle 3 */
+  }
+
+  .edu-grid {
+    gap: 10px;
+  }
+}
+/* ================= BILLEDE STØRRELSER – DESKTOP ================= */
+
+/* 3 uddannelsesbilleder – samme størrelse */
+.edu-grid img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= MOBIL ================= */
+@media (max-width: 899px) {
+  .row-img {
+    height: 280px;
+  }
+
+  .edu-grid img {
+    height: 200px;
+  }
+}
+/* ================= BILLEDER – KORREKTE PROTOTYPE STØRRELSER ================= */
+
+/* Alle billeder: fyld rammen pænt */
+.row-img,
+.edu-grid img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 900px) {
+  /* 1) Portræt (første række) */
+  .ommig > .row:first-of-type .row-img {
+    height: 560px; /* stor som i prototype */
+  }
+
+  /* 2) Uddannelse: 3 ens billeder (høje) */
+  .edu-grid img {
+    height: 420px; /* ens højde */
+  }
+
+  /* 3) Erhverv (sidste række) */
+  .ommig > .row:last-of-type .row-img {
+    height: 360px; /* lidt lavere end portræt */
+  }
+}
+
+/* ===== MOBIL ===== */
+@media (max-width: 899px) {
+  /* Portræt øverst */
+  .ommig > .row:first-of-type .row-img {
+    height: 300px;
+  }
+
+  /* 3 billeder (stadig ens) */
+  .edu-grid img {
+    height: 180px;
+  }
+
+  /* Erhvervsbilledet */
+  .ommig > .row:last-of-type .row-img {
+    height: 260px;
+  }
+}

@@ -1,0 +1,202 @@
+:root {
+  /* Farver fra Figma */
+  --bg: #f8f8f6;
+  --logo: #3c2f26;
+  --nav: #554129;
+  --line: #3c2f26;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.site-header {
+  width: 100%;
+  background: var(--bg);
+  border-bottom: 2px solid var(--line);
+}
+
+/* “container” så det ligner din prototype (ikke super-spredt) */
+.header-inner {
+  max-width: 1400px; /* justér evt. 1200-1600 hvis du vil */
+  margin: 0 auto;
+  padding: 14px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 60px; /* luft mellem logo og menu */
+}
+
+/* LOGO (Poppins Light 32.7 / farve 3C2F26) */
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 32.7px; /* Desktop størrelse fra Figma */
+  color: var(--logo);
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Desktop menu skal fylde resten og fordele links jævnt */
+.nav-desktop {
+  display: none; /* skjult på mobil */
+  align-items: center;
+}
+
+/* Menu links (Poppins Regular 21.7 / farve 554129) */
+.nav-desktop a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 21.7px;
+  color: var(--nav);
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* Burger (mobil) */
+.burger {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.burger span {
+  display: block;
+  width: 34px;
+  height: 2px;
+  background: var(--logo);
+}
+
+/* Mobil menu */
+.nav-mobile {
+  display: none;
+  padding: 10px 24px 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nav-mobile a {
+  display: block;
+  padding: 10px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--nav);
+  text-decoration: none;
+}
+
+/* Når burger er åben */
+.site-header.open .nav-mobile {
+  display: block;
+}
+
+/* ================= MOBIL ================= */
+@media (max-width: 899px) {
+  .header-inner {
+    padding: 12px 16px;
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 15.34px; /* Mobil størrelse fra Figma */
+    font-weight: 300; /* Light */
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 900px) {
+  .header-inner {
+    padding: 4px 24px;
+    gap: 0;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 22px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .nav-desktop {
+    display: flex;
+    flex: 1; /* fylder resten af headeren */
+    justify-content: center; /* menu centreret som prototype */
+    gap: 64px; /* afstand mellem links */
+  }
+
+  .nav-desktop a {
+    font-size: 16px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none !important;
+  }
+}
+/* ================= MOBIL MENU (ÅBEN / BRUN OVERLAY) ================= */
+@media (max-width: 899px) {
+  /* skjult som udgangspunkt */
+  .nav-mobile {
+    display: none;
+  }
+
+  /* når burger er åben */
+  .site-header.open .nav-mobile {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: #3c2f26;
+
+    padding: 110px 28px 140px; /* luft over + under  teksten */
+    gap: 26px;
+
+    z-index: 999;
+  }
+
+  .site-header.open .nav-mobile a {
+    font-family: "Poly", serif;
+    font-size: 32px;
+    color: #f8f8f6;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1.05;
+  }
+
+  /* burger bliver lys */
+  .site-header.open .burger span {
+    background: #f8f8f6;
+  }
+
+  /* header-bar over overlay */
+  .header-inner {
+    position: relative;
+    z-index: 1000;
+  }
+}

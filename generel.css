@@ -224,3 +224,32 @@ body {
     font-size: 10px; /* mindre tekst på mobil */
   }
 }
+/* ================= BUTTON (GLOBAL) ================= */
+.btn {
+  display: inline-block;
+  padding: 12px 36px;
+
+  background-color: #f5f4f0;
+  border: 1px solid #898a84;
+
+  color: #554129;
+  text-decoration: none;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, font-weight 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e6e4de;
+  font-weight: 600;
+}
+
+.btn:active {
+  background-color: #dad7cf;
+}

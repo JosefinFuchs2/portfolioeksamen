@@ -120,18 +120,6 @@
   line-height: 1.6;
 }
 
-.welcome-btn {
-  display: inline-block;
-  padding: 10px 26px;
-  border: 1px solid #898a84;
-  background: transparent;
-  color: var(--logo);
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-}
-
 /* ================= DESKTOP (Figma størrelser) ================= */
 @media (min-width: 900px) {
   .index {
@@ -160,18 +148,49 @@
     font-size: 23.7px; /* fra Figma */
   }
 }
-
-/* ================= MOBIL (så det ikke bliver for voldsomt) ================= */
 @media (max-width: 899px) {
-  .hero-info {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    margin-top: 14px;
+  /* HERO TITEL */
+  .hero-top {
+    font-size: 42px;
+    white-space: nowrap; /* holder “VELKOMMEN TIL MIN” på én linje */
   }
 
-  .hero-info-left,
-  .hero-info-mid,
-  .hero-info-right {
+  .hero-script {
+    font-size: 96px;
+    line-height: 1;
+  }
+
+  .hero-script-row {
+    display: inline-flex; /* Portfolio + 2025 på samme linje */
+    align-items: baseline;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .hero-year {
+    font-size: 14px;
+  }
+
+  /* DE 3 SMÅ TEKSTER */
+  .hero-info {
+    grid-template-columns: 1fr 1fr 1fr; /* IKKE stack */
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+
+  .hero-info p {
+    font-size: 11px;
+  }
+
+  .hero-info-left {
+    text-align: left;
+  }
+
+  .hero-info-mid {
     text-align: center;
+  }
+
+  .hero-info-right {
+    text-align: right;
   }
 }

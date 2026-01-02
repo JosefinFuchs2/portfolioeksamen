@@ -1,0 +1,203 @@
+/* ================= UX/UI ================= */
+
+/* SIDE */
+.uxui-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px 80px;
+}
+
+/* HERO */
+.uxui-hero {
+  padding: 0;
+  margin: 0;
+}
+
+.uxui-hero img {
+  width: 100vw;
+  height: 580px;
+  object-fit: cover;
+  display: block;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* INTRO */
+.uxui-intro {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.uxui-title {
+  font-family: "Poly", serif;
+  font-size: 34px;
+  letter-spacing: 1px;
+  color: #3c2f26;
+  margin: 0 0 10px;
+}
+
+.uxui-text {
+  max-width: 90ch;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #898a84;
+}
+
+/* ================= DESKTOP: 4 BILLEDER ================= */
+
+.uxui-cardgrid {
+  margin: 60px auto 0;
+  max-width: 860px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.uxui-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.uxui-card-caption {
+  margin: 10px 0 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: #898a84;
+  letter-spacing: 1px;
+}
+
+/* ================= SPLIT SEKTIONER ================= */
+
+.uxui-split {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  column-gap: 40px;
+  align-items: start;
+}
+
+.uxui-split-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  max-height: 520px;
+}
+
+.uxui-split-text h2 {
+  font-family: "Poly", serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #3c2f26;
+  margin: 0 0 10px;
+  line-height: 1.1;
+}
+
+.uxui-split-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+  color: #898a84;
+  margin: 0 0 12px;
+  max-width: 62ch;
+}
+
+.uxui-btn {
+  display: block;
+  width: fit-content;
+  margin: 18px auto 0;
+  padding: 10px 18px;
+  border: 1px solid #3c2f26;
+  text-decoration: none;
+  color: #3c2f26;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+}
+
+/* LØSNING & LÆRING */
+.uxui-split-reverse {
+  margin-top: 140px;
+  grid-template-columns: 420px 1fr;
+}
+
+.uxui-split-reverse .uxui-split-img {
+  order: 2;
+}
+
+.uxui-split-reverse .uxui-split-text {
+  order: 1;
+}
+
+/* ================= MOBIL ================= */
+@media (max-width: 899px) {
+  .uxui-page {
+    padding: 0 24px 60px;
+  }
+
+  .uxui-hero img {
+    height: 300px;
+  }
+
+  .uxui-intro {
+    padding-top: 28px;
+    padding-bottom: 40px;
+  }
+
+  .uxui-title {
+    font-size: 28px;
+  }
+
+  .uxui-cardgrid {
+    grid-template-columns: 1fr 1fr; /* 2 ved siden af hinanden */
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .uxui-card {
+    text-align: center;
+  }
+
+  /* hvis du vil have captions under hvert billede på mobil */
+  .uxui-card-caption {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 899px) {
+  /* Tving billederne i PROCES og LØSNING til at blive vist */
+  .uxui-split-img {
+    display: block;
+    width: 100%;
+  }
+
+  .uxui-split-img img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Stack sektionerne korrekt */
+  .uxui-split {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* LØSNING: billede over tekst */
+  .uxui-split-reverse {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .uxui-split-reverse .uxui-split-img {
+    order: -1;
+  }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grundlæggende web</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poly&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="generel.css" />
+    <link rel="stylesheet" href="gweb.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">JOSEFIN FILIPPA FUCHS</a>
+
+        <nav class="nav-desktop">
+          <a href="ommig.html">Om mig</a>
+          <a href="gweb.html">Grundl. web</a>
+          <a href="#">UX/UI</a>
+          <a href="#">Animation</a>
+          <a href="#">Grundl. indhold</a>
+          <a href="#">Portfolio</a>
+        </nav>
+
+        <button class="burger" aria-label="Åbn menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="nav-mobile">
+        <a href="ommig.html">Om mig</a>
+        <a href="gweb.html">Grundl. web</a>
+        <a href="#">UX/UI</a>
+        <a href="#">Animation</a>
+        <a href="#">Grundl. indhold</a>
+        <a href="#">Portfolio</a>
+      </nav>
+    </header>
+
+    <main class="gweb">
+      <!-- HERO -->
+      <section class="hero-full">
+        <img
+          class="shot hero-shot"
+          src="img/placeholder.webp"
+          alt="Screenshot af gammel hjemmeside"
+        />
+      </section>
+
+      <!-- INTRO -->
+      <section class="section intro">
+        <div class="wrap">
+          <h1 class="title">GRUNDLÆGGENDE WEB</h1>
+          <p class="lead">
+            I dette tema arbejdede jeg med opbygning af websites ved hjælp af
+            HTML og CSS. Jeg lærte grundlæggende principper for responsivt
+            webdesign, strukturering af indhold og brug af designkonventioner.
+            Derudover arbejdede jeg med Figma, billedbehandling, semantisk
+            markup og mobile-first design, hvilket gav et solidt fundament for
+            videre arbejde med webudvikling.
+          </p>
+        </div>
+      </section>
+
+      <!-- PROCES (SPEJLVENDT: telefoner venstre, tekst højre) -->
+      <section class="section">
+        <div class="wrap wrap-wide mid-grid">
+          <div class="two-shots">
+            <img
+              class="shot phone-shot"
+              src="img/gweb1.webp"
+              alt="Screenshot: gweb 1"
+            />
+            <img
+              class="shot phone-shot"
+              src="img/gweb2.webp"
+              alt="Screenshot: gweb 2"
+            />
+          </div>
+
+          <div class="text-card text-pad">
+            <h2 class="subTitle">PROCES</h2>
+
+            <p class="p">
+              I dette tema arbejdede jeg med opbygning af websites ved hjælp af
+              HTML og CSS. Processen startede med at sætte mig ind i
+              grundlæggende designprincipper og webkonventioner, herunder
+              struktur, hierarki og responsivt design. Jeg arbejdede med
+              wireframes og layout i Figma, som dannede grundlag for opbygningen
+              af sitet.
+            </p>
+
+            <p class="p">
+              Herefter arbejdede jeg med semantisk HTML, CSS grid og flexbox
+              samt en mobile-first tilgang. Undervejs testede og justerede jeg
+              layoutet, så siden fungerede på forskellige skærmstørrelser og
+              havde en tydelig navigation.
+            </p>
+
+            <a class="btn" href="#">Figma</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- LØSNING & LÆRING (SPEJL: tekst venstre, telefoner højre) -->
+      <section class="section">
+        <div class="wrap wrap-wide bottom-grid">
+          <div class="text-card text-pad">
+            <h2 class="subTitle">
+              LØSNING &amp;<br />
+              LÆRING
+            </h2>
+
+            <p class="p">
+              Den færdige løsning er et responsivt website, der fungerer på både
+              mobil og desktop og er opbygget med fokus på struktur og
+              overskuelighed. Layoutet er udviklet med en mobile-first tilgang,
+              så indholdet tilpasses forskellige skærmstørrelser.
+            </p>
+
+            <p class="p">
+              Gennem temaet har jeg opnået en grundlæggende forståelse for,
+              hvordan websites struktureres og opbygges ved hjælp af HTML og
+              CSS. Jeg har lært at arbejde mere systematisk med kode og fået
+              indsigt i vigtigheden af semantisk markup og en klar opbygning af
+              indhold.
+            </p>
+
+            <p class="p">
+              Derudover har jeg fået en bedre forståelse for, hvordan designvalg
+              og kode hænger sammen i udviklingen af digitale løsninger, og
+              hvordan små justeringer i layout og struktur kan have stor
+              betydning for brugeroplevelsen.
+            </p>
+
+            <a
+              class="btn"
+              href="https://josefinfuchs2.github.io/studiestartstest/"
+            >
+              Se færdig løsning
+            </a>
+          </div>
+
+          <div class="two-shots">
+            <img
+              class="shot phone-shot"
+              src="img/gweb3.webp"
+              alt="Screenshot: gweb3"
+            />
+            <img
+              class="shot phone-shot"
+              src="img/gweb4.webp"
+              alt="Screenshot: gweb4"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <img src="footer.webp" alt="Illustreret footer" class="footer-image" />
+      <p>Portfolio af Josefin Filippa Fuchs</p>
+    </footer>
+
+    <script src="generel.js"></script>
+  </body>
+</html>

@@ -207,6 +207,28 @@ body {
     z-index: 1000;
   }
 }
+
+.hero-full {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero-full .hero-shot {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 899px) {
+  .hero-full .hero-shot {
+    height: 260px;
+  }
+}
+
 /* ================= FOOTER ================= */
 .site-footer {
   text-align: center;

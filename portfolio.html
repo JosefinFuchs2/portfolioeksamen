@@ -31,6 +31,7 @@
       <div class="header-inner">
         <a href="index.html" class="logo">JOSEFIN FILIPPA FUCHS</a>
 
+        <!-- Desktop menu -->
         <nav class="nav-desktop">
           <a href="ommig.html">Om mig</a>
           <a href="gweb.html">Grundl. web</a>
@@ -40,12 +41,21 @@
           <a href="portfolio.html">Portfolio</a>
         </nav>
 
-        <button class="burger" aria-label="Åbn menu">
-          <span></span><span></span><span></span>
+        <!-- Burger (mobil) -->
+        <button
+          class="burger"
+          aria-label="Åbn menu"
+          aria-expanded="false"
+          aria-controls="nav-mobile"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
 
-      <nav class="nav-mobile">
+      <!-- Mobil menu -->
+      <nav class="nav-mobile" id="nav-mobile">
         <a href="ommig.html">Om mig</a>
         <a href="gweb.html">Grundl. web</a>
         <a href="uxui.html">UX/UI</a>

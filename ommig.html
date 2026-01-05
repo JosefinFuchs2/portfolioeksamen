@@ -27,7 +27,7 @@
   </head>
 
   <body>
-    <!-- HEADER (samme som index) -->
+    <!-- HEADER -->
     <header class="site-header">
       <div class="header-inner">
         <a href="index.html" class="logo">JOSEFIN FILIPPA FUCHS</a>
@@ -42,12 +42,21 @@
           <a href="portfolio.html">Portfolio</a>
         </nav>
 
-        <button class="burger" aria-label="Åbn menu">
-          <span></span><span></span><span></span>
+        <!-- Burger (mobil) -->
+        <button
+          class="burger"
+          aria-label="Åbn menu"
+          aria-expanded="false"
+          aria-controls="nav-mobile"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
 
-      <nav class="nav-mobile">
+      <!-- Mobil menu -->
+      <nav class="nav-mobile" id="nav-mobile">
         <a href="ommig.html">Om mig</a>
         <a href="gweb.html">Grundl. web</a>
         <a href="uxui.html">UX/UI</a>
@@ -58,7 +67,7 @@
     </header>
 
     <main class="ommig">
-      <!-- 1) PORTRÆT + OM MIG (Desktop: billede venstre, tekst højre | Mobil: billede øverst, tekst under) -->
+      <!-- 1) PORTRÆT + OM MIG  -->
       <section class="about-row">
         <div class="about-img">
           <img src="img/2/portraet.webp" alt="Portræt" />
@@ -88,7 +97,7 @@
         </div>
       </section>
 
-      <!-- 2) UDDANNELSE (Desktop: tekst venstre, 3 billeder højre | Mobil: 3 billeder OVER teksten) -->
+      <!-- 2) UDDANNELSE -->
       <section class="edu">
         <div class="edu-inner">
           <!-- tekst -->
@@ -120,8 +129,8 @@
           <!-- billeder -->
           <div class="edu-grid">
             <figure class="edu-card">
-              <img src="img/2/lhg.webp" alt="Lyngby Handelsgymnasium" />
-              <figcaption>LHG</figcaption>
+              <img src="img/2/kea.webp" alt="KEA" />
+              <figcaption>KEA</figcaption>
             </figure>
 
             <figure class="edu-card">
@@ -130,14 +139,14 @@
             </figure>
 
             <figure class="edu-card">
-              <img src="img/2/kea.webp" alt="KEA" />
-              <figcaption>KEA</figcaption>
+              <img src="img/2/lhg.webp" alt="Lyngby Handelsgymnasium" />
+              <figcaption>LHG</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
-      <!-- 3) ERHVERVSERFARING (Desktop: billede venstre, tekst højre | Mobil: billede øverst, tekst under) -->
+      <!-- 3) ERHVERVSERFARING -->
       <section class="work-row">
         <div class="work-img">
           <img src="img/2/erhverv.webp" alt="Erhvervsbillede" />

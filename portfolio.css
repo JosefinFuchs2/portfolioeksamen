@@ -124,6 +124,11 @@
 
 /* ================= MOBIL ================= */
 @media (max-width: 899px) {
+  .portfolio {
+    padding-left: 32px;
+    padding-right: 28px;
+  }
+
   .wrap-wide {
     padding: 0 24px;
   }
@@ -194,43 +199,47 @@
   }
 }
 @media (min-width: 900px) {
-  /* store billeder */
-  .big-shot {
-    max-width: 980px;
-    margin: 0 auto 60px;
-  }
-
-  /* PROCES + LØSNING på samme bane */
+  /* Samme bredde for ALLE “store” ting */
+  .big-shot,
   .process-grid,
   .solution-grid {
     max-width: 980px;
-    margin: 0 auto;
-    display: grid;
-    align-items: start;
-    column-gap: 80px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  /* PROCES: tekst venstre, billede højre */
+  /* store billeder */
+  .big-shot {
+    margin-bottom: 60px;
+  }
+
+  /* Grid der PASSER i 980px:
+     380 + 80 + 520 = 980  ✅ */
   .process-grid {
-    grid-template-columns: 480px 520px;
+    display: grid;
+    grid-template-columns: 380px 520px;
+    column-gap: 80px;
+    align-items: start;
     margin-top: 60px;
     margin-bottom: 90px;
   }
 
-  /* LØSNING: billede venstre, tekst højre */
+  /* LØSNING: 520 + 80 + 380 = 980 ✅ */
   .solution-grid {
-    grid-template-columns: 520px 480px;
-    column-gap: 110px; /* gør teksten mere ind mod midten */
+    display: grid;
+    grid-template-columns: 520px 380px;
+    column-gap: 80px; /* hold den ens så det flugter */
+    align-items: start;
   }
 
-  /* VIGTIGT: fjern small-shot centrerings-margin på desktop */
-  .process-grid .small-shot,
-  .solution-grid .small-shot {
-    max-width: none;
-    margin: 0;
+  /* VIGTIGT: fjern indvendig padding så teksten flugter med kanten */
+  .process-grid .text-pad,
+  .solution-grid .text-pad {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  /* Billederne: 100% ens */
+  /* Billederne: samme størrelse */
   .square-shot {
     width: 520px;
     height: 520px;
@@ -248,15 +257,5 @@
   .solution-grid .img-card {
     display: flex;
     justify-content: flex-start; /* portfolio4 helt til venstre */
-  }
-
-  /* LØSNING-teksten mere ind mod midten */
-  .solution-grid .text-pad {
-    padding-right: 110px;
-  }
-}
-@media (min-width: 900px) {
-  body {
-    outline: 8px solid red;
   }
 }

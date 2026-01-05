@@ -50,14 +50,16 @@
 .about-img img,
 .work-img img {
   width: 100%;
-  height: auto;
-  display: block;
+  aspect-ratio: 1 / 1; /* ← gør billedet kvadratisk */
   object-fit: cover;
+  display: block;
+}
+.about-text {
+  padding-top: 70px; /* behold for OM MIG */
 }
 
-.about-text,
 .work-text {
-  padding-top: 30px;
+  padding-top: 0; /* ERHVERVSERFARING flugter med billedets top */
 }
 
 /* ================= UDDANNELSE ================= */
@@ -133,10 +135,12 @@
     gap: 70px;
     margin-bottom: 40px;
   }
+  .about-text {
+    padding-top: 70px; /* behold for OM MIG */
+  }
 
-  .about-text,
   .work-text {
-    padding-top: 70px; /* matcher “høj” tekst i prototype */
+    padding-top: 0; /* ERHVERVSERFARING flugter med billedets top */
   }
 
   .page-title {
@@ -156,10 +160,6 @@
 
   .edu {
     padding: 10px 0 80px;
-  }
-
-  .edu-card img {
-    height: 340px; /* 3 ens lodrette kort */
   }
 }
 @media (min-width: 900px) {
@@ -196,13 +196,14 @@
     flex-direction: column-reverse;
     gap: 18px;
   }
-
   .edu-card img {
-    height: 210px; /* samme højde på alle 3 */
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
   }
 
   .edu-grid {
-    gap: 10px;
+    justify-items: center;
   }
 }
 /* ================= BILLEDE STØRRELSER – DESKTOP ================= */
@@ -219,10 +220,6 @@
 @media (max-width: 899px) {
   .row-img {
     height: 280px;
-  }
-
-  .edu-grid img {
-    height: 200px;
   }
 }
 /* ================= BILLEDER – KORREKTE PROTOTYPE STØRRELSER ================= */
@@ -260,11 +257,6 @@
     height: 300px;
   }
 
-  /* 3 billeder (stadig ens) */
-  .edu-grid img {
-    height: 180px;
-  }
-
   /* Erhvervsbilledet */
   .ommig > .row:last-of-type .row-img {
     height: 260px;
@@ -272,4 +264,7 @@
 }
 .about-text p {
   margin-bottom: 20px;
+}
+.ommig img {
+  filter: grayscale(100%);
 }

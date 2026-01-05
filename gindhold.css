@@ -179,7 +179,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     max-width: 100%;
-    margin-bottom: 60px; /* mere luft før proces */
+    margin-bottom: 24 px; /* mere luft før proces */
   }
 
   /* ===== PROCES – MOBIL ===== */
@@ -262,6 +262,9 @@
   }
   .process-grid > .media-card {
     display: none;
+  }
+  .thumbs-section {
+    margin-top: 24px; /* mindre luft på mobil */
   }
 }
 

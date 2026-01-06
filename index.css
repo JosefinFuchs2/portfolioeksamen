@@ -8,14 +8,14 @@
 /* HERO */
 .hero {
   text-align: center;
-  padding-top: 130px; /* mere luft fra header */
-  padding-bottom: 60px; /* mere luft før de små tekster */
+  padding-top: 130px;
+  padding-bottom: 60px;
 }
 
 .hero-top {
   font-family: "Poly", serif;
   font-weight: 400;
-  font-size: 58px; /* mobil/standard */
+  font-size: 58px;
   color: var(--logo);
   line-height: 1.05;
 }
@@ -30,7 +30,7 @@
 .hero-script {
   font-family: "MonteCarlo", cursive;
   font-weight: 400;
-  font-size: 140px; /* mobil/standard */
+  font-size: 140px;
   color: var(--logo);
   line-height: 1;
 }
@@ -44,14 +44,14 @@
 
 /* de 3 små tekster */
 .hero-info {
-  margin-top: 130px; /* længere ned */
+  margin-top: 130px;
   margin-bottom: 10px;
 
-  width: 100vw; /* fylder hele skærmen */
-  margin-left: calc(50% - 50vw); /* trækker ud af .index */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  padding: 0 80px; /* afstand fra kanterne */
+  padding: 0 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: end;
@@ -80,10 +80,9 @@
 /* STORT BILLEDE */
 .hero-img {
   width: 100vw;
-  max-height: 700px; /* gør billedet lavere */
-  object-fit: cover; /* beskærer i stedet for at strække */
+  max-height: 700px;
+  object-fit: cover;
   display: block;
-  /* top | højre/venstre | bund */
   margin: 10px calc(50% - 50vw) 60px;
 }
 
@@ -120,7 +119,7 @@
   line-height: 1.6;
 }
 
-/* ================= DESKTOP (Figma størrelser) ================= */
+/* ================= DESKTOP  ================= */
 @media (min-width: 900px) {
   .index {
     padding: 24px 24px 70px;
@@ -137,15 +136,15 @@
   }
 
   .hero-info p {
-    font-size: 20.7px; /* fra Figma */
+    font-size: 20.7px;
   }
 
   .welcome-title {
-    font-size: 73.7px; /* fra Figma */
+    font-size: 73.7px;
   }
 
   .welcome-sub {
-    font-size: 23.7px; /* fra Figma */
+    font-size: 23.7px;
   }
 }
 @media (max-width: 899px) {
@@ -173,7 +172,7 @@
 
   /* DE 3 SMÅ TEKSTER */
   .hero-info {
-    grid-template-columns: 1fr 1fr 1fr; /* IKKE stack */
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 40px;
     padding: 0 16px;
   }
@@ -192,5 +191,8 @@
 
   .hero-info-right {
     text-align: right;
+  }
+  .hero {
+    padding-top: 80px; /* var 130px */
   }
 }

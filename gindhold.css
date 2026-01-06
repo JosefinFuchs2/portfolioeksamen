@@ -2,21 +2,18 @@
   padding: 0 0 40px;
 }
 
-/* Normal container  */
 .wrap {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* Wide wrap */
 .wrap-wide {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 80px;
 }
 
-/* Billeder generelt */
 .shot {
   width: 100%;
   display: block;
@@ -92,9 +89,9 @@
 /* ===== 4 billeder ===== */
 .thumbs {
   display: grid;
-  grid-template-columns: repeat(4, 367px); /* vælger størrelsen */
+  grid-template-columns: repeat(4, 367px);
   justify-content: center;
-  gap: 12px; /* afstand mellem telefoner */
+  gap: 12px;
   margin: 0 auto;
   max-width: 100%;
 }
@@ -145,7 +142,6 @@
 }
 
 /* ================= MOBIL ================= */
-/* intro-billede findes kun til mobil */
 .intro-media {
   display: none;
 }
@@ -164,22 +160,21 @@
   }
 
   .title {
-    font-size: 25px; /* mindre på mobil */
+    font-size: 25px;
     line-height: 1.1;
     word-break: break-word;
   }
 
-  /* wrap-wide mindre padding på mobil */
   .wrap-wide {
     padding: 0 24px;
   }
 
-  /* 4 billeder: 2 + 2 */
+  /* 4 billeder */
   .thumbs {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     max-width: 100%;
-    margin-bottom: 24 px; /* mere luft før proces */
+    margin-bottom: 24 px;
   }
 
   /* ===== PROCES – MOBIL ===== */
@@ -221,26 +216,22 @@
 
   .solution-shot {
     max-width: 100%;
-    margin: 0 auto; /* centrer billedet */
+    margin: 0 auto;
     height: auto;
     object-fit: contain;
   }
-  /* mere luft mellem hero og intro (kun mobil) */
   .hero-full {
     margin-bottom: 24px;
   }
 
-  /* mere luft mellem intro og thumbnails */
   .section.intro {
     margin-bottom: 32px;
   }
 
-  /* mere luft mellem thumbnails og proces */
   .thumbs-section {
     margin-bottom: 70px;
   }
 
-  /* afstand mellem knap og billede */
   .process-text .btn {
     margin-bottom: 24px;
   }
@@ -263,7 +254,7 @@
     display: none;
   }
   .thumbs-section {
-    margin-top: 24px; /* mindre luft på mobil */
+    margin-top: 24px;
   }
 }
 

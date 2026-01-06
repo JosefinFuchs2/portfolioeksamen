@@ -1,5 +1,5 @@
 :root {
-  /* Farver fra Figma */
+  /* Farver */
   --bg: #f8f8f6;
   --logo: #3c2f26;
   --nav: #554129;
@@ -25,22 +25,21 @@ body {
   border-bottom: 2px solid var(--line);
 }
 
-/* “container” så det ligner din prototype (ikke super-spredt) */
 .header-inner {
-  max-width: 1400px; /* justér evt. 1200-1600 hvis du vil */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 14px 24px;
 
   display: flex;
   align-items: center;
-  gap: 60px; /* luft mellem logo og menu */
+  gap: 60px;
 }
 
-/* LOGO (Poppins Light 32.7 / farve 3C2F26) */
+/* LOGO */
 .logo {
   font-family: "Poppins", sans-serif;
-  font-weight: 300; /* Light */
-  font-size: 32.7px; /* Desktop størrelse fra Figma */
+  font-weight: 300;
+  font-size: 32.7px;
   color: var(--logo);
   text-decoration: none;
   text-transform: uppercase;
@@ -48,16 +47,15 @@ body {
   white-space: nowrap;
 }
 
-/* Desktop menu skal fylde resten og fordele links jævnt */
 .nav-desktop {
-  display: none; /* skjult på mobil */
+  display: none;
   align-items: center;
 }
 
-/* Menu links (Poppins Regular 21.7 / farve 554129) */
+/* Menu links  */
 .nav-desktop a {
   font-family: "Poppins", sans-serif;
-  font-weight: 400; /* Regular */
+  font-weight: 400;
   font-size: 21.7px;
   color: var(--nav);
   text-decoration: none;
@@ -117,8 +115,8 @@ body {
   }
 
   .logo {
-    font-size: 15.34px; /* Mobil størrelse fra Figma */
-    font-weight: 300; /* Light */
+    font-size: 15.34px;
+    font-weight: 300;
   }
 }
 
@@ -138,9 +136,9 @@ body {
 
   .nav-desktop {
     display: flex;
-    flex: 1; /* fylder resten af headeren */
-    justify-content: center; /* menu centreret som prototype */
-    gap: 64px; /* afstand mellem links */
+    flex: 1;
+    justify-content: center;
+    gap: 64px;
   }
 
   .nav-desktop a {
@@ -159,14 +157,12 @@ body {
   }
 }
 
-/* ================= MOBIL MENU (ÅBEN / BRUN OVERLAY) ================= */
+/* ================= MOBIL MENU (ÅBEN) ================= */
 @media (max-width: 899px) {
-  /* skjult som udgangspunkt */
   .nav-mobile {
     display: none;
   }
 
-  /* når burger er åben */
   .site-header.open .nav-mobile {
     display: flex;
     flex-direction: column;
@@ -179,7 +175,7 @@ body {
 
     background: #3c2f26;
 
-    padding: 110px 28px 140px; /* luft over + under  teksten */
+    padding: 110px 28px 140px;
     gap: 26px;
 
     z-index: 999;
@@ -197,12 +193,14 @@ body {
     opacity: 0.6;
   }
 
-  /* burger bliver lys */
+  .site-header.open .nav-mobile a:hover {
+    color: #c9bdae;
+  }
+
   .site-header.open .burger span {
     background: #f8f8f6;
   }
 
-  /* header-bar over overlay */
   .header-inner {
     position: relative;
     z-index: 1000;
@@ -242,14 +240,14 @@ body {
 }
 
 .site-footer p {
-  padding: 10px 0 12px; /* mindre afstand til billedet */
+  padding: 10px 0 12px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
 /* ================= FOOTER – MOBIL ================= */
 @media (max-width: 899px) {
   .site-footer p {
-    font-size: 10px; /* mindre tekst på mobil */
+    font-size: 10px;
   }
 }
 /* ================= BUTTON (GLOBAL) ================= */
@@ -292,4 +290,43 @@ body {
     font-weight: 700;
     color: var(--logo);
   }
+}
+
+.hero-full {
+  position: relative;
+}
+/* ================= VIDEO PLAY KNAP ================= */
+.video-toggle {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  padding: 8px 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #3c2f26;
+  color: #3c2f26;
+  cursor: pointer;
+  z-index: 2;
+}
+/* Sticky header (hide on scroll down, show on scroll up) */
+:root {
+  --header-h: 74px; /* hvis din header overlapper indhold: ret tallet */
+}
+
+body {
+  padding-top: var(--header-h);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  transition: transform 0.25s ease;
+}
+
+.site-header.header-hidden {
+  transform: translateY(-110%);
 }

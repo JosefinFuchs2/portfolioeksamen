@@ -3,21 +3,18 @@
   padding: 0 0 40px;
 }
 
-/* Normal container */
 .wrap {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* Wide wrap */
 .wrap-wide {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 80px;
 }
 
-/* Billeder generelt */
 .shot {
   width: 100%;
   display: block;
@@ -39,7 +36,7 @@
 }
 
 .lead {
-  max-width: 80ch; /*  gør teksten smallere, så den fylder mere nedad */
+  max-width: 80ch;
   margin: 0 auto;
   font-size: 14px;
   line-height: 1.85;
@@ -73,14 +70,14 @@
   max-width: 62ch;
 }
 
-/* KNAP: centreret under tekst */
+/* KNAP */
 .text-card .btn {
   display: block;
   width: fit-content;
   margin: 18px auto 0;
 }
 
-/* BILLEDER (størrelser som i din skitse) */
+/* BILLEDER  */
 .big-shot {
   max-width: 980px;
   margin: 0 auto;
@@ -91,7 +88,7 @@
   margin: 0 auto;
 }
 
-/* PROCES: tekst venstre, billede højre */
+/* PROCES */
 .process-grid {
   display: grid;
   grid-template-columns: 420px 1fr;
@@ -105,7 +102,7 @@
   justify-content: center;
 }
 
-/* LØSNING: billede venstre, tekst højre */
+/* LØSNING */
 .solution {
   margin-top: 45px;
 }
@@ -147,13 +144,13 @@
     padding-right: 0;
   }
 
-  /* PROCES: billede UNDER tekst (som din mobilskitse) */
+  /* PROCES */
   .process-grid {
     grid-template-columns: 1fr;
     row-gap: 40px;
   }
 
-  /* LØSNING: tekst først, billede under (som din mobilskitse) */
+  /* LØSNING */
   .solution-grid {
     display: flex;
     flex-direction: column;
@@ -177,7 +174,6 @@
     margin: 20px auto 0;
   }
 
-  /* Mobil: gør portfolio2 og portfolio4 100% ens */
   .process-grid .img-card,
   .solution-grid .img-card {
     width: 100%;
@@ -187,19 +183,17 @@
   .solution-grid .small-shot {
     width: 100%;
     max-width: 520px;
-    height: 200px; /* aflange */
-    object-fit: cover; /* beskærer pænt */
+    height: 200px;
+    object-fit: cover;
     display: block;
-    margin: 0 auto; /* centrerer begge ens */
+    margin: 0 auto;
   }
 
-  /* Mobil: mere afstand mellem portfolio2 og portfolio3 */
   .process-grid {
     margin-bottom: 80px;
   }
 }
 @media (min-width: 900px) {
-  /* Samme bredde for ALLE “store” ting */
   .big-shot,
   .process-grid,
   .solution-grid {
@@ -213,8 +207,6 @@
     margin-bottom: 60px;
   }
 
-  /* Grid der PASSER i 980px:
-     380 + 80 + 520 = 980  ✅ */
   .process-grid {
     display: grid;
     grid-template-columns: 380px 520px;
@@ -224,22 +216,20 @@
     margin-bottom: 90px;
   }
 
-  /* LØSNING: 520 + 80 + 380 = 980 ✅ */
+  /* LØSNING*/
   .solution-grid {
     display: grid;
     grid-template-columns: 520px 380px;
-    column-gap: 80px; /* hold den ens så det flugter */
+    column-gap: 80px;
     align-items: start;
   }
 
-  /* VIGTIGT: fjern indvendig padding så teksten flugter med kanten */
   .process-grid .text-pad,
   .solution-grid .text-pad {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* Billederne: samme størrelse */
   .square-shot {
     width: 520px;
     height: 520px;
@@ -248,14 +238,13 @@
     margin: 0;
   }
 
-  /* Placering af billederne i hver grid */
   .process-grid .img-card {
     display: flex;
-    justify-content: flex-end; /* portfolio2 helt til højre */
+    justify-content: flex-end;
   }
 
   .solution-grid .img-card {
     display: flex;
-    justify-content: flex-start; /* portfolio4 helt til venstre */
+    justify-content: flex-start;
   }
 }

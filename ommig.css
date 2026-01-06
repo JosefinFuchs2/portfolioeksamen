@@ -37,7 +37,7 @@
   line-height: 1.7;
 }
 
-/* ================= ROWS (Desktop: 2 kolonner) ================= */
+/* ================= ROWS  ================= */
 .about-row,
 .work-row {
   display: grid;
@@ -55,11 +55,11 @@
   display: block;
 }
 .about-text {
-  padding-top: 70px; /* behold for OM MIG */
+  padding-top: 70px;
 }
 
 .work-text {
-  padding-top: 0; /* ERHVERVSERFARING flugter med billedets top */
+  padding-top: 0;
 }
 
 /* ================= UDDANNELSE ================= */
@@ -85,7 +85,7 @@
   color: #898a84;
 }
 
-/* 3 billeder (ens størrelse, “smalle lodrette” som prototype) */
+/* 3 billeder */
 .edu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -100,7 +100,7 @@
 
 .edu-card img {
   width: 100%;
-  height: 360px; /* desktop “tall” look */
+  height: 360px;
   object-fit: cover;
   display: block;
 }
@@ -118,14 +118,14 @@
   padding: 4px 6px;
 }
 
-/* ================= DESKTOP (som din prototype) ================= */
+/* ================= DESKTOP ================= */
 @media (min-width: 900px) {
   .ommig {
     padding: 50px 16px 90px;
   }
 
   .about-row {
-    grid-template-columns: 1.05fr 1fr; /* billede lidt større */
+    grid-template-columns: 1.05fr 1fr;
     gap: 70px;
     margin-bottom: 60px;
   }
@@ -136,11 +136,11 @@
     margin-bottom: 40px;
   }
   .about-text {
-    padding-top: 70px; /* behold for OM MIG */
+    padding-top: 70px;
   }
 
   .work-text {
-    padding-top: 0; /* ERHVERVSERFARING flugter med billedets top */
+    padding-top: 0;
   }
 
   .page-title {
@@ -151,7 +151,7 @@
     font-size: 46px;
   }
 
-  /* UDDANNELSE: tekst venstre, billeder højre */
+  /* UDDANNELSE: */
   .edu-inner {
     grid-template-columns: 1fr 1.1fr;
     gap: 70px;
@@ -164,12 +164,12 @@
 }
 @media (min-width: 900px) {
   .row-img {
-    height: 520px; /* gør portræt + erhverv mindre høje */
-    object-fit: cover; /* beskærer pænt */
+    height: 520px;
+    object-fit: cover;
   }
 }
 
-/* ================= MOBIL (som din prototype: alt stack + billeder OVER uddannelse-tekst) ================= */
+/* ================= MOBIL ================= */
 @media (max-width: 899px) {
   .ommig {
     padding: 26px 16px 70px;
@@ -188,9 +188,6 @@
     padding-top: 0;
   }
 
-  /* MOBIL: uddannelse skal være:
-     billeder -> titel + liste
-     derfor bytter vi rækkefølgen visuelt */
   .edu-inner {
     display: flex;
     flex-direction: column-reverse;
@@ -206,9 +203,8 @@
     justify-items: center;
   }
 }
-/* ================= BILLEDE STØRRELSER – DESKTOP ================= */
+/* =============== BILLEDE STØRRELSER – DESKTOP ================ */
 
-/* 3 uddannelsesbilleder – samme størrelse */
 .edu-grid img {
   width: 100%;
   height: 380px;
@@ -222,9 +218,8 @@
     height: 280px;
   }
 }
-/* ================= BILLEDER – KORREKTE PROTOTYPE STØRRELSER ================= */
+/* ================= BILLEDER ================= */
 
-/* Alle billeder: fyld rammen pænt */
 .row-img,
 .edu-grid img {
   width: 100%;
@@ -234,30 +229,28 @@
 
 /* ===== DESKTOP ===== */
 @media (min-width: 900px) {
-  /* 1) Portræt (første række) */
+  /* Portræt */
   .ommig > .row:first-of-type .row-img {
-    height: 560px; /* stor som i prototype */
+    height: 560px;
   }
 
-  /* 2) Uddannelse: 3 ens billeder (høje) */
+  /* Uddannelse 3 */
   .edu-grid img {
-    height: 420px; /* ens højde */
+    height: 420px;
   }
 
-  /* 3) Erhverv (sidste række) */
+  /* Erhverv */
   .ommig > .row:last-of-type .row-img {
-    height: 360px; /* lidt lavere end portræt */
+    height: 360px;
   }
 }
 
 /* ===== MOBIL ===== */
 @media (max-width: 899px) {
-  /* Portræt øverst */
   .ommig > .row:first-of-type .row-img {
     height: 300px;
   }
 
-  /* Erhvervsbilledet */
   .ommig > .row:last-of-type .row-img {
     height: 260px;
   }

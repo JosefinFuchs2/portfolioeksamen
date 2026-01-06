@@ -1,24 +1,19 @@
-/* GWEB */
-
 .gweb {
   padding: 0 0 40px;
 }
 
-/* Normal container (tekst-sektioner) */
 .wrap {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* Wide wrap (alt rykkes ind mod midten som din prototype) */
 .wrap-wide {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 80px;
 }
 
-/* Billeder generelt */
 .shot {
   width: 100%;
   display: block;
@@ -88,24 +83,24 @@
   max-width: 62ch;
 }
 
-/* KNAP: centreret under tekst */
+/* KNAP */
 .text-card .btn {
   display: block;
   width: fit-content;
   margin: 18px auto 0;
 }
 
-/* ===== TELEFON-GRUPPE (samme afstand i begge sektioner) ===== */
+/* ===== TELEFON-GRUPPE  ===== */
 .two-shots {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px; /* afstand mellem telefonerne (ENS begge steder) */
+  gap: 28px;
   align-items: start;
   justify-items: center;
-  max-width: 720px; /* holder dem samlet */
+  max-width: 720px;
 }
 
-/* Telefon-billeder: samme størrelse */
+/* Telefon-billeder samme str */
 .phone-shot {
   width: 100%;
   max-width: 300px;
@@ -113,22 +108,22 @@
   object-fit: contain;
 }
 
-/* ===== PROCES: telefoner venstre, tekst højre ===== */
+/* ===== PROCES ===== */
 .mid-grid {
   display: grid;
   grid-template-columns: 1fr 420px;
-  column-gap: 40px; /* afstand mellem telefoner og tekst */
+  column-gap: 40px;
   align-items: start;
 }
 
-/* ===== LØSNING: tekst venstre, telefoner højre ===== */
+/* ===== LØSNING OG LÆRING ===== */
 .bottom-grid {
   display: grid;
   grid-template-columns: 420px 1fr;
-  column-gap: 40px; /* SAMME afstand som mid-grid */
+  column-gap: 40px;
   row-gap: 10px;
   align-items: start;
-  margin-top: 120px; /* luft før LØSNING & LÆRING */
+  margin-top: 120px;
 }
 
 @media (max-width: 899px) {
@@ -152,12 +147,12 @@
 
   /* ===== MID (PROCES) ===== */
   .mid-grid {
-    grid-template-columns: 1fr; /* tekst under billeder */
+    grid-template-columns: 1fr;
     row-gap: 60px;
   }
 
   .mid-grid .two-shots {
-    grid-template-columns: 1fr 1fr; /* billeder ved siden af hinanden */
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
     max-width: 100%;
   }
@@ -168,12 +163,12 @@
 
   /* ===== BUND (LØSNING & LÆRING) ===== */
   .bottom-grid {
-    grid-template-columns: 1fr; /* tekst under billeder */
+    grid-template-columns: 1fr;
     row-gap: 32px;
   }
 
   .bottom-grid .two-shots {
-    grid-template-columns: 1fr 1fr; /* billeder ved siden af hinanden */
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
     max-width: 100%;
   }
@@ -192,19 +187,17 @@
     padding-left: 24px;
     padding-right: 24px;
   }
-  /* ===== MOBIL: LØSNING & LÆRING – billeder OVER tekst ===== */
+  /* ===== MOBIL: LØSNING & LÆRING – billeder over tekst ===== */
   .bottom-grid {
     display: flex;
     flex-direction: column;
   }
 
-  /* sørger for at billederne kommer først */
   .bottom-grid .two-shots {
     order: -1;
     margin-bottom: 8px;
   }
-  /* MINDRE luft mellem PROCES (Figma-knap) og næste sektion (gweb3/gweb4) */
   .bottom-grid {
-    margin-top: 60px; /* prøv 16px hvis du vil have den endnu tættere */
+    margin-top: 60px;
   }
 }

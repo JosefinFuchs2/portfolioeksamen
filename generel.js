@@ -7,45 +7,25 @@ if (header && burger) {
     header.classList.toggle("open");
     document.body.classList.toggle("no-scroll");
   });
-
-  // ===== Sticky header =====//
-  let lastY = window.scrollY;
-  const threshold = 10;
-
-  window.addEventListener("scroll", () => {
-    const y = window.scrollY;
-    const goingDown = y > lastY;
-
-    if (header.classList.contains("open")) {
-      header.classList.remove("header-hidden");
-      lastY = y;
-      return;
-    }
-
-    if (Math.abs(y - lastY) < threshold) return;
-
-    if (goingDown && y > 120) {
-      header.classList.add("header-hidden");
-    } else {
-      header.classList.remove("header-hidden");
-    }
-
-    lastY = y;
-  });
 }
 
 // ===== Hero video play/pause (global) =====
-const video = document.querySelector(".hero-video");
-const button = document.querySelector(".video-toggle");
+document.querySelectorAll(".hero-full").forEach((hero) => {
+  const video = hero.querySelector(".hero-video");
+  const button = hero.querySelector(".video-toggle");
+  if (!video || !button) return;
 
-if (video && button) {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", async () => {
     if (video.paused) {
-      video.play();
-      button.textContent = "Pause";
+      try {
+        await video.play();
+        button.textContent = "Pause";
+      } catch (err) {
+        console.log("Video kunne ikke afspilles:", err);
+      }
     } else {
       video.pause();
       button.textContent = "Afspil";
     }
   });
-}
+});

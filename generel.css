@@ -213,11 +213,12 @@ body {
   margin-right: calc(50% - 50vw);
   overflow: hidden;
   padding: 0;
+  position: relative;
 }
 
 .hero-full .hero-shot {
   width: 100%;
-  height: 550px;
+  height: 520px;
   object-fit: cover;
   display: block;
 }
@@ -292,9 +293,6 @@ body {
   }
 }
 
-.hero-full {
-  position: relative;
-}
 /* ================= VIDEO PLAY KNAP ================= */
 .video-toggle {
   position: absolute;
@@ -309,24 +307,9 @@ body {
   cursor: pointer;
   z-index: 2;
 }
-/* Sticky header (hide on scroll down, show on scroll up) */
-:root {
-  --header-h: 74px; /* hvis din header overlapper indhold: ret tallet */
+.video-toggle {
+  pointer-events: auto;
 }
-
-body {
-  padding-top: var(--header-h);
-}
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  transition: transform 0.25s ease;
-}
-
-.site-header.header-hidden {
-  transform: translateY(-110%);
+.hero-shot {
+  pointer-events: none;
 }

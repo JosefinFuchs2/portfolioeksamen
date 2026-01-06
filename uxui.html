@@ -17,7 +17,6 @@
       rel="stylesheet"
     />
 
-    <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="generel.css" />
     <link rel="stylesheet" href="uxui.css" />
   </head>
@@ -67,15 +66,16 @@
       <section class="hero-full">
         <video
           class="shot hero-shot hero-video"
+          autoplay
           muted
           loop
           playsinline
           preload="metadata"
           poster="img/4/hero4.webp"
+          fetchpriority="high"
         >
           <source src="video/uxuihero.mp4" type="video/mp4" />
         </video>
-
         <button class="video-toggle" type="button">Afspil</button>
       </section>
 
@@ -91,7 +91,7 @@
           digitale løsninger.
         </p>
 
-        <!-- 4 "kort" under teksten -->
+        <!-- 4 små kort under teksten -->
         <div class="uxui-cardgrid">
           <article class="uxui-card">
             <img src="img/4/uxui1.webp" alt="UX/UI billede 1" />
@@ -111,7 +111,7 @@
         </div>
       </section>
 
-      <!-- PROCES -->
+      <!-- PROCES (billede venstre / tekst højre) -->
       <section class="uxui-split">
         <div class="uxui-split-img">
           <img src="img/4/uxui5.webp" alt="Proces billede" />
@@ -151,7 +151,7 @@
         </div>
       </section>
 
-      <!-- LØSNING & LÆRING  -->
+      <!-- LØSNING & LÆRING (tekst venstre / billede højre) -->
       <section class="uxui-split uxui-split-reverse">
         <div class="uxui-split-img">
           <img src="img/4/uxui6.webp" alt="Løsning billede" />

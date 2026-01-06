@@ -2,7 +2,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 80px 80px;
-} /* HERO */
+}
 
 /* INTRO */
 .uxui-intro {
@@ -24,7 +24,9 @@
   font-size: 14px;
   line-height: 1.85;
   color: #898a84;
-} /* ================= DESKTOP ================= */
+}
+
+/* ================= DESKTOP ================= */
 .uxui-cardgrid {
   margin: 60px auto 0;
   max-width: 860px;
@@ -45,7 +47,9 @@
   font-size: 12px;
   color: #898a84;
   letter-spacing: 1px;
-} /* ================= SPLIT SEKTIONER ================= */
+}
+
+/* ================= SPLIT SEKTIONER ================= */
 .uxui-split {
   margin-top: 70px;
   display: grid;
@@ -75,7 +79,9 @@
   color: #898a84;
   margin: 0 0 12px;
   max-width: 62ch;
-} /* LØSNING & LÆRING */
+}
+
+/* LØSNING & LÆRING */
 .uxui-split-reverse {
   margin-top: 140px;
   grid-template-columns: 420px 1fr;
@@ -85,7 +91,9 @@
 }
 .uxui-split-reverse .uxui-split-text {
   order: 1;
-} /* ================= MOBIL ================= */
+}
+
+/* ================= MOBIL ================= */
 @media (max-width: 899px) {
   .uxui-page {
     padding: 0 24px 60px;

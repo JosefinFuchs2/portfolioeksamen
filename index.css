@@ -1,3 +1,4 @@
+/* ================= INDEX (FORSIDE) ================= */
 .index {
   max-width: 1100px;
   margin: 0 auto;
@@ -10,7 +11,6 @@
   padding-top: 130px;
   padding-bottom: 60px;
 }
-
 .hero-top {
   font-family: "Poly", serif;
   font-weight: 400;
@@ -18,14 +18,12 @@
   color: var(--logo);
   line-height: 1.05;
 }
-
 .hero-script-row {
   display: inline-flex;
   align-items: baseline;
   gap: 10px;
   margin-top: 6px;
 }
-
 .hero-script {
   font-family: "MonteCarlo", cursive;
   font-weight: 400;
@@ -33,7 +31,6 @@
   color: var(--logo);
   line-height: 1;
 }
-
 .hero-year {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -45,17 +42,14 @@
 .hero-info {
   margin-top: 130px;
   margin-bottom: 10px;
-
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-
   padding: 0 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: end;
 }
-
 .hero-info p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -63,15 +57,12 @@
   color: #898a84;
   line-height: 1.3;
 }
-
 .hero-info-left {
   text-align: left;
 }
-
 .hero-info-mid {
   text-align: center;
 }
-
 .hero-info-right {
   text-align: right;
 }
@@ -90,7 +81,6 @@
   text-align: center;
   padding: 18px 0 10px;
 }
-
 .welcome-title {
   font-family: "Poly", serif;
   font-weight: 400;
@@ -98,7 +88,6 @@
   color: var(--logo);
   line-height: 1.1;
 }
-
 .welcome-sub {
   margin-top: 6px;
   font-family: "Poppins", sans-serif;
@@ -107,7 +96,6 @@
   color: #898a84;
   letter-spacing: 1px;
 }
-
 .welcome-text {
   margin: 14px auto 18px;
   max-width: 62ch;
@@ -118,30 +106,25 @@
   line-height: 1.6;
 }
 
-/* ================= DESKTOP  ================= */
-@media (min-width: px) {
+/* ================= DESKTOP ================= */
+@media (min-width: 900px) {
   .index {
     padding: 24px 24px 70px;
   }
-
   .hero-top {
     font-size: clamp(70px, 6.5vw, 110px);
     white-space: nowrap;
   }
-
   .hero-script {
     font-size: clamp(140px, 12vw, 220px);
     line-height: 1;
   }
-
   .hero-info p {
     font-size: 20.7px;
   }
-
   .welcome-title {
     font-size: 73.7px;
   }
-
   .welcome-sub {
     font-size: 23.7px;
   }
@@ -150,21 +133,18 @@
   /* HERO TITEL */
   .hero-top {
     font-size: 42px;
-    white-space: normal;
+    white-space: nowrap; /* holder “VELKOMMEN TIL MIN” på én linje */
   }
-
   .hero-script {
     font-size: 96px;
     line-height: 1;
   }
-
   .hero-script-row {
     display: inline-flex; /* Portfolio + 2025 på samme linje */
     align-items: baseline;
     gap: 6px;
     margin-top: 10px;
   }
-
   .hero-year {
     font-size: 14px;
   }
@@ -172,15 +152,22 @@
   /* DE 3 SMÅ TEKSTER */
   .hero-info {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 80px;
+    margin-top: 40px;
     padding: 0 16px;
   }
-
   .hero-info p {
     font-size: 11px;
   }
-
+  .hero-info-left {
+    text-align: left;
+  }
+  .hero-info-mid {
+    text-align: center;
+  }
+  .hero-info-right {
+    text-align: right;
+  }
   .hero {
-    padding-top: 80px; /* var 130px */
+    padding-top: 80px;
   }
 }

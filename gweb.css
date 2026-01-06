@@ -19,8 +19,6 @@
   display: block;
 }
 
-/* HERO */
-
 /* INTRO */
 .intro {
   text-align: center;
@@ -78,7 +76,7 @@
   margin: 18px auto 0;
 }
 
-/* ===== TELEFON-GRUPPE  ===== */
+/* ===== TELEFON-billeer  ===== */
 .two-shots {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -170,7 +168,7 @@
     padding-left: 24px;
     padding-right: 24px;
   }
-  /* ===== MOBIL: LØSNING & LÆRING – billeder over tekst ===== */
+  /* ===== MOBIL: LØSNING & LÆRING ===== */
   .bottom-grid {
     display: flex;
     flex-direction: column;

@@ -2,7 +2,6 @@
   padding: 0 0 40px;
 }
 
-/* Container helpers (bruges også andre steder) */
 .wrap {
   max-width: 1400px;
   margin: 0 auto;
@@ -80,7 +79,7 @@
   margin: 0 auto;
 }
 
-/* ================= GRID (desktop default) ================= */
+/* ================= GRID (desktop ) ================= */
 .process-grid,
 .solution-grid {
   max-width: 980px;
@@ -105,7 +104,7 @@
   grid-template-columns: 520px 380px;
 }
 
-/* Square images (desktop) */
+/* Square billeder (desktop) */
 .square-shot {
   width: 520px;
   height: 520px;
@@ -125,7 +124,6 @@
   justify-content: flex-start;
 }
 
-/* Fjern ekstra padding på desktop grids */
 .process-grid .text-pad,
 .solution-grid .text-pad {
   padding-left: 0;

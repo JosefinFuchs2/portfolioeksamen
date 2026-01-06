@@ -303,20 +303,51 @@ body.no-scroll {
 /* ================= VIDEO PLAY KNAP ================= */
 .video-toggle {
   position: absolute;
-  bottom: 24px;
-  right: 24px;
-  padding: 8px 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 28px;
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid #3c2f26;
-  color: #3c2f26;
+
   cursor: pointer;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.video-toggle {
-  pointer-events: auto;
+
+.video-toggle:hover {
+  background: rgba(0, 0, 0, 0.75);
 }
+
 .hero-shot {
   pointer-events: none;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.site-header.hide {
+  transform: translateY(-100%);
+}
+@media (max-width: 899px) {
+  body {
+    padding-top: 56px;
+  }
+}
+body {
+  padding-top: 30px;
 }

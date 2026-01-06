@@ -89,7 +89,7 @@
 /* ===== 4 billeder ===== */
 .thumbs {
   display: grid;
-  grid-template-columns: repeat(4, 367px);
+  grid-template-columns: repeat(4, minmax(0, 367px));
   justify-content: center;
   gap: 12px;
   margin: 0 auto;
@@ -103,6 +103,9 @@
   display: block;
 }
 
+.thumbs-section {
+  margin-top: 100px;
+}
 /* ===== PROCES ===== */
 .process-grid {
   display: grid;
@@ -174,9 +177,11 @@
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     max-width: 100%;
-    margin-bottom: 24 px;
+    margin-bottom: 24px;
   }
-
+  .thumbs-section {
+    margin-top: 100px;
+  }
   /* ===== PROCES – MOBIL ===== */
   .process-grid {
     display: flex;
@@ -261,7 +266,4 @@
 html,
 body {
   overflow-x: hidden;
-}
-.thumbs-section {
-  margin-top: 100px;
 }

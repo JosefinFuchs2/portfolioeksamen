@@ -1,26 +1,21 @@
-/* PORTFOLIO */
 .portfolio {
   padding: 0 0 40px;
 }
 
+/* Container helpers (bruges også andre steder) */
 .wrap {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-.wrap-wide {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 80px;
-}
-
+/* Media */
 .shot {
   width: 100%;
   display: block;
 }
 
-/* INTRO */
+/* ================= INTRO ================= */
 .intro {
   text-align: center;
   padding-top: 80px;
@@ -43,10 +38,7 @@
   color: #898a84;
 }
 
-/* TEKST */
-.text-card {
-  padding: 0;
-}
+/* ================= TEKST ================= */
 
 .text-pad {
   padding-left: 56px;
@@ -70,17 +62,17 @@
   max-width: 62ch;
 }
 
-/* KNAP */
+/* Knap */
 .text-card .btn {
   display: block;
   width: fit-content;
   margin: 18px auto 0;
 }
 
-/* BILLEDER  */
+/* ================= BILLEDER ================= */
 .big-shot {
   max-width: 980px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
 }
 
 .small-shot {
@@ -88,48 +80,60 @@
   margin: 0 auto;
 }
 
-/* PROCES */
-.process-grid {
+/* ================= GRID (desktop default) ================= */
+.process-grid,
+.solution-grid {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  grid-template-columns: 420px 1fr;
-  column-gap: 60px;
+  column-gap: 80px;
   align-items: start;
-  margin-top: 40px;
 }
 
-.process-grid .img-card {
-  display: flex;
-  justify-content: center;
+.process-grid {
+  grid-template-columns: 380px 520px;
+  margin-top: 60px;
+  margin-bottom: 90px;
 }
 
-/* LØSNING */
 .solution {
   margin-top: 45px;
 }
 
 .solution-grid {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  column-gap: 60px;
-  align-items: start;
+  grid-template-columns: 520px 380px;
+}
+
+/* Square images (desktop) */
+.square-shot {
+  width: 520px;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  max-width: none;
+}
+
+.process-grid .img-card {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .solution-grid .img-card {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+/* Fjern ekstra padding på desktop grids */
+.process-grid .text-pad,
+.solution-grid .text-pad {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* ================= MOBIL ================= */
 @media (max-width: 899px) {
-  .portfolio {
-    padding-left: 32px;
-    padding-right: 28px;
-  }
-
-  .wrap-wide {
-    padding: 0 24px;
-  }
-
   .intro {
     padding-top: 28px;
     padding-bottom: 40px;
@@ -139,17 +143,18 @@
     font-size: 28px;
   }
 
-  .text-pad {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   /* PROCES */
   .process-grid {
     grid-template-columns: 1fr;
     row-gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 80px;
   }
-
+  .process-grid .text-card,
+  .solution-grid .text-card {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   /* LØSNING */
   .solution-grid {
     display: flex;
@@ -177,8 +182,10 @@
   .process-grid .img-card,
   .solution-grid .img-card {
     width: 100%;
+    justify-content: center;
   }
 
+  /* Små billeder på mobil */
   .process-grid .small-shot,
   .solution-grid .small-shot {
     width: 100%;
@@ -187,64 +194,5 @@
     object-fit: cover;
     display: block;
     margin: 0 auto;
-  }
-
-  .process-grid {
-    margin-bottom: 80px;
-  }
-}
-@media (min-width: 900px) {
-  .big-shot,
-  .process-grid,
-  .solution-grid {
-    max-width: 980px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* store billeder */
-  .big-shot {
-    margin-bottom: 60px;
-  }
-
-  .process-grid {
-    display: grid;
-    grid-template-columns: 380px 520px;
-    column-gap: 80px;
-    align-items: start;
-    margin-top: 60px;
-    margin-bottom: 90px;
-  }
-
-  /* LØSNING*/
-  .solution-grid {
-    display: grid;
-    grid-template-columns: 520px 380px;
-    column-gap: 80px;
-    align-items: start;
-  }
-
-  .process-grid .text-pad,
-  .solution-grid .text-pad {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .square-shot {
-    width: 520px;
-    height: 520px;
-    object-fit: cover;
-    display: block;
-    margin: 0;
-  }
-
-  .process-grid .img-card {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .solution-grid .img-card {
-    display: flex;
-    justify-content: flex-start;
   }
 }

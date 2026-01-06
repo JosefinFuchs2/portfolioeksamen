@@ -20,18 +20,6 @@
 }
 
 /* HERO */
-.hero-full {
-  padding: 0;
-  margin: 0;
-}
-
-.hero-shot {
-  width: 100%;
-  height: 550px;
-  object-fit: cover;
-  border-radius: 0;
-  display: block;
-}
 
 /* INTRO */
 .intro {
@@ -127,11 +115,6 @@
 }
 
 @media (max-width: 899px) {
-  /* HERO */
-  .hero-shot {
-    height: 260px;
-  }
-
   /* INTRO */
   .intro {
     padding-top: 60px;

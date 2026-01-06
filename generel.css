@@ -6,6 +6,11 @@
   --line: #3c2f26;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +22,9 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
 /* ================= HEADER ================= */
 
 .site-header {
